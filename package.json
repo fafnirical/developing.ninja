@@ -1,0 +1,11 @@
+{
+  "name": "developing.ninja",
+  "version": "0.0.0",
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.4",
+    "cz-conventional-changelog": "^3.1.0"
+  }
+}
