@@ -1,4 +1,7 @@
-module.exports = {
+/**
+ * @type {import('prettier').Options}
+ */
+const config = {
   printWidth: 80,
   // tabWidth: 2, // Handled by EditorConfig.
   // useTabs: false, // Handled by EditorConfig.
@@ -17,3 +20,5 @@ module.exports = {
   vueIndentScriptAndStyle: false,
   // endOfLine: 'lf', // Handled by EditorConfig.
 };
+
+module.exports = config;

@@ -1,4 +1,7 @@
-module.exports = {
+/**
+ * @type {import('eslint').Linter.Config & import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config}
+ */
+const config = {
   root: true,
   extends: [
     'airbnb',
@@ -42,3 +45,5 @@ module.exports = {
     },
   ],
 };
+
+module.exports = config;
