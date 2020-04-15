@@ -15,5 +15,6 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
+  "include": ["*.js", ".*.js", "src/**/*"],
   "exclude": [".cache", "node_modules", "public"]
 }

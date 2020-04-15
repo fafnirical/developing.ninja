@@ -4,3 +4,9 @@
 # Gatsby build folders
 /.cache/
 /public/
+
+# Generated GraphQL typings/schemas
+/src/gatsby-graphql-types.d.ts
+/src/gatsby-introspection.json
+/src/gatsby-schema.graphql
+/src/gatsby-plugin-documents.graphql
