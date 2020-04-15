@@ -1,3 +1,14 @@
+const path = require('path');
+
+const graphqlRuleConfig = {
+  env: 'literal',
+  schemaJsonFilepath: path.resolve(
+    __dirname,
+    './src/gatsby-introspection.json',
+  ),
+  tagName: 'graphql',
+};
+
 /**
  * @type {import('eslint').Linter.Config & import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config}
  */
@@ -9,6 +20,13 @@ const config = {
     'plugin:prettier/recommended',
     'prettier/react',
   ],
+  plugins: ['graphql'],
+  rules: {
+    'graphql/template-strings': ['error', graphqlRuleConfig],
+    'graphql/named-operations': ['error', graphqlRuleConfig],
+    'graphql/capitalized-type-name': ['error', graphqlRuleConfig],
+    'graphql/no-deprecated-fields': ['error', graphqlRuleConfig],
+  },
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
