@@ -1,5 +1,7 @@
+require('dotenv-safe').config();
+
 /**
- * @type {import('gatsby').GatsbyConfig | { plugins?: Array<string | { resolve: string; options: Record<string, unknown> } | { resolve: 'gatsby-plugin-typegen'; options: import('gatsby-plugin-typegen/types').PluginOptions }> }}
+ * @type {import('gatsby').GatsbyConfig & { plugins?: Array<string | { resolve: string; options: Record<string, unknown> } | { resolve: 'gatsby-plugin-typegen'; options: import('gatsby-plugin-typegen/types').PluginOptions }> }}
  */
 const config = {
   plugins: [
@@ -16,6 +18,14 @@ const config = {
         emitPluginDocuments: {
           './src/gatsby-plugin-documents.graphql': true,
         },
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        useNameForId: false,
       },
     },
   ],
