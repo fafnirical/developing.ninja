@@ -5,7 +5,6 @@ require('dotenv-safe').config();
  */
 const config = {
   plugins: [
-    'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-plugin-typegen',
       options: {
