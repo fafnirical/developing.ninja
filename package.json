@@ -23,7 +23,7 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^8.3.4",
     "@schemastore/huskyrc": "0.0.2",
     "@types/dotenv-safe": "^8.1.0",
