@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^9.1.2",
+    "@commitlint/config-conventional": "^11.0.0",
     "@schemastore/huskyrc": "0.0.3",
     "@types/dotenv-safe": "^8.1.1",
     "@types/eslint": "^7.2.2",
