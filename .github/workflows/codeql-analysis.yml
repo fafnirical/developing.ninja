@@ -1,4 +1,4 @@
-name: CodeQL
+name: CodeQL Analysis
 
 on:
   push:
@@ -15,6 +15,10 @@ jobs:
 
     strategy:
       fail-fast: false
+      matrix:
+        # Override automatic language detection to run analysis in parallel.
+        # @see https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/configuring-code-scanning#changing-the-languages-that-are-analyzed
+        languages: ['javascript']
 
     steps:
     - name: Checkout repository
@@ -31,6 +35,8 @@ jobs:
 
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
+      with:
+        languages: ${{ matrix.language }}
 
     # Autobuild attempts to build any compiled languages.
     - name: Autobuild
