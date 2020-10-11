@@ -30,6 +30,7 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb/hooks',
+    'plugin:eslint-comments/recommended',
     'plugin:prettier/recommended',
     'prettier/react',
   ],
@@ -53,6 +54,7 @@ module.exports = {
         ],
       },
     ],
+    'eslint-comments/no-unused-disable': 'error',
   },
   overrides: [
     {
@@ -98,6 +100,11 @@ module.exports = {
         // Use TypeScript interfaces instead of prop-types.
         'react/prop-types': 'off',
       },
+    },
+    {
+      files: ['**/*.js', '**/*.ts'],
+      excludedFiles: ['src/**/*'],
+      extends: ['plugin:node/recommended'],
     },
   ],
 };
