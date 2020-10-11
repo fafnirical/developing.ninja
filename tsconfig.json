@@ -13,8 +13,16 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["*.js", ".*.js", "src/**/*"],
+  "include": [
+    "**/.*.js",
+    "**/*.js",
+    "**/*.jsx",
+    "**/.*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
   "exclude": [".cache", "node_modules", "public"]
 }

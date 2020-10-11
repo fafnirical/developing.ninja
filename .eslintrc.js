@@ -1,5 +1,9 @@
 const path = require('path');
+const fs = require('fs');
 
+/**
+ * @type {Partial<import('eslint-plugin-graphql').RuleProperties>}
+ */
 const graphqlRuleConfig = {
   env: 'literal',
   schemaJsonFilepath: path.resolve(
@@ -9,23 +13,48 @@ const graphqlRuleConfig = {
   tagName: 'graphql',
 };
 
+const graphqlSchemaExists = graphqlRuleConfig.schemaJsonFilepath
+  ? fs.existsSync(graphqlRuleConfig.schemaJsonFilepath)
+  : true;
+
 /**
- * @type {import('eslint').Linter.Config & import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config}
+ * @type {import('eslint')
+ *   .Linter.Config<
+ *     import('eslint/rules').ESLintRules & import('eslint-plugin-graphql').Rules
+ *   > &
+ *     import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config
+ * }
  */
-const config = {
+module.exports = {
   root: true,
   extends: [
     'airbnb',
     'airbnb/hooks',
+    'plugin:eslint-comments/recommended',
     'plugin:prettier/recommended',
     'prettier/react',
   ],
   plugins: ['graphql'],
   rules: {
-    'graphql/template-strings': ['error', graphqlRuleConfig],
-    'graphql/named-operations': ['error', graphqlRuleConfig],
-    'graphql/capitalized-type-name': ['error', graphqlRuleConfig],
-    'graphql/no-deprecated-fields': ['error', graphqlRuleConfig],
+    ...(graphqlSchemaExists && {
+      'graphql/template-strings': ['error', graphqlRuleConfig],
+      'graphql/named-operations': ['error', graphqlRuleConfig],
+      'graphql/capitalized-type-name': ['error', graphqlRuleConfig],
+      'graphql/no-deprecated-fields': ['error', graphqlRuleConfig],
+    }),
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.d.ts',
+          '**/.eslintrc.js',
+          '**/husky.config.js',
+          '**/prettier.config.js',
+          'apollo.config.js',
+        ],
+      },
+    ],
+    'eslint-comments/no-unused-disable': 'error',
   },
   overrides: [
     {
@@ -37,7 +66,18 @@ const config = {
         'prettier/@typescript-eslint',
       ],
       parserOptions: {
-        project: './tsconfig.json',
+        project: 'tsconfig.json',
+      },
+      settings: {
+        'import/parser': {
+          '@typescript-eslint/parser': ['.ts', '.tsx'],
+        },
+        'import-resolver': {
+          typescript: {
+            alwaysTryTypes: true,
+            project: 'tsconfig.json',
+          },
+        },
       },
       rules: {
         'import/extensions': [
@@ -61,7 +101,10 @@ const config = {
         'react/prop-types': 'off',
       },
     },
+    {
+      files: ['**/*.js', '**/*.ts'],
+      excludedFiles: ['src/**/*'],
+      extends: ['plugin:node/recommended'],
+    },
   ],
 };
-
-module.exports = config;

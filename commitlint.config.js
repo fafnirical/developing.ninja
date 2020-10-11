@@ -1,10 +1,6 @@
 /**
- * @type {import('@commitlint/resolve-extends').ResolveExtendsConfig}
- *
- * @todo Use `@commitlint/types` once it's published.
+ * @type {import('@commitlint/types').UserConfig}
  */
-const config = {
+module.exports = {
   extends: ['@commitlint/config-conventional'],
 };
-
-module.exports = config;
