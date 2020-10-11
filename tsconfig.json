@@ -15,6 +15,13 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["**/.*.js", "**/*.js", "**/*.jsx", "**/.*.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "**/.*.js",
+    "**/*.js",
+    "**/*.jsx",
+    "**/.*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
   "exclude": [".cache", "node_modules", "public"]
 }
