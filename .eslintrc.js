@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 
 /**
  * @type {Partial<import('eslint-plugin-graphql').RuleProperties>}
@@ -11,6 +12,10 @@ const graphqlRuleConfig = {
   ),
   tagName: 'graphql',
 };
+
+const graphqlSchemaExists = graphqlRuleConfig.schemaJsonFilepath
+  ? fs.existsSync(graphqlRuleConfig.schemaJsonFilepath)
+  : true;
 
 /**
  * @type {import('eslint')
@@ -30,10 +35,12 @@ module.exports = {
   ],
   plugins: ['graphql'],
   rules: {
-    'graphql/template-strings': ['error', graphqlRuleConfig],
-    'graphql/named-operations': ['error', graphqlRuleConfig],
-    'graphql/capitalized-type-name': ['error', graphqlRuleConfig],
-    'graphql/no-deprecated-fields': ['error', graphqlRuleConfig],
+    ...(graphqlSchemaExists && {
+      'graphql/template-strings': ['error', graphqlRuleConfig],
+      'graphql/named-operations': ['error', graphqlRuleConfig],
+      'graphql/capitalized-type-name': ['error', graphqlRuleConfig],
+      'graphql/no-deprecated-fields': ['error', graphqlRuleConfig],
+    }),
     'import/no-extraneous-dependencies': [
       'error',
       {
