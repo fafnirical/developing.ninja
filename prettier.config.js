@@ -19,4 +19,5 @@ module.exports = {
   htmlWhitespaceSensitivity: 'ignore',
   vueIndentScriptAndStyle: false,
   // endOfLine: 'lf', // Handled by EditorConfig.
+  embeddedLanguageFormatting: 'auto',
 };
