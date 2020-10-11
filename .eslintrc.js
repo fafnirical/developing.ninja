@@ -1,5 +1,8 @@
 const path = require('path');
 
+/**
+ * @type {Partial<import('eslint-plugin-graphql').RuleProperties>}
+ */
 const graphqlRuleConfig = {
   env: 'literal',
   schemaJsonFilepath: path.resolve(
@@ -10,9 +13,14 @@ const graphqlRuleConfig = {
 };
 
 /**
- * @type {import('eslint').Linter.Config & import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config}
+ * @type {import('eslint')
+ *   .Linter.Config<
+ *     import('eslint/rules').ESLintRules & import('eslint-plugin-graphql').Rules
+ *   > &
+ *     import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config
+ * }
  */
-const config = {
+module.exports = {
   root: true,
   extends: [
     'airbnb',
@@ -26,6 +34,18 @@ const config = {
     'graphql/named-operations': ['error', graphqlRuleConfig],
     'graphql/capitalized-type-name': ['error', graphqlRuleConfig],
     'graphql/no-deprecated-fields': ['error', graphqlRuleConfig],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.d.ts',
+          '**/.eslintrc.js',
+          '**/husky.config.js',
+          '**/prettier.config.js',
+          'apollo.config.js',
+        ],
+      },
+    ],
   },
   overrides: [
     {
@@ -37,7 +57,18 @@ const config = {
         'prettier/@typescript-eslint',
       ],
       parserOptions: {
-        project: './tsconfig.json',
+        project: 'tsconfig.json',
+      },
+      settings: {
+        'import/parser': {
+          '@typescript-eslint/parser': ['.ts', '.tsx'],
+        },
+        'import-resolver': {
+          typescript: {
+            alwaysTryTypes: true,
+            project: 'tsconfig.json',
+          },
+        },
       },
       rules: {
         'import/extensions': [
@@ -63,5 +94,3 @@ const config = {
     },
   ],
 };
-
-module.exports = config;
