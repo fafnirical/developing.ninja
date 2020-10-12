@@ -1,9 +1,19 @@
 require('dotenv-safe').config();
 
 /**
- * @type {import('gatsby').GatsbyConfig & { plugins?: Array<string | { resolve: string; options: Record<string, unknown> } | { resolve: 'gatsby-plugin-typegen'; options: import('gatsby-plugin-typegen/types').PluginOptions }> }}
+ * @type {import('gatsby').GatsbyConfig
+ *   & {
+ *     plugins?: Array<
+ *       import('gatsby').PluginRef |
+ *       {
+ *         resolve: 'gatsby-plugin-typegen';
+ *         options: import('gatsby-plugin-typegen/types').PluginOptions
+ *       }
+ *     >
+ *   }
+ * }
  */
-const config = {
+module.exports = {
   plugins: [
     {
       resolve: 'gatsby-plugin-typegen',
@@ -29,5 +39,3 @@ const config = {
     },
   ],
 };
-
-module.exports = config;
