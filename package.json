@@ -20,7 +20,7 @@
     "gatsby-plugin-typegen": "^2.2.1",
     "gatsby-source-contentful": "^2.3.55",
     "react": "^16.14.0",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.14.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
