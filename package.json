@@ -18,7 +18,7 @@
     "gatsby": "^2.27.4",
     "gatsby-image": "^2.6.0",
     "gatsby-plugin-typegen": "^2.2.1",
-    "gatsby-source-contentful": "^3.0.6",
+    "gatsby-source-contentful": "^4.1.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
