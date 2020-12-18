@@ -14,7 +14,15 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "plugins": [
+      {
+        "name": "ts-graphql-plugin",
+        "schema": ".cache/schema.graphql",
+        "tag": "gql"
+      }
+    ]
   },
   "include": [
     "**/.*.js",
@@ -24,5 +32,5 @@
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": [".cache", "node_modules", "public"]
+  "exclude": [".cache", "node_modules", "public"],
 }
