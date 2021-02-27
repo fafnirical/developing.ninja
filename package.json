@@ -15,7 +15,7 @@
     "@types/react": "^16.14.4",
     "@types/react-dom": "^16.9.11",
     "dotenv-safe": "^8.2.0",
-    "gatsby": "^2.29.3",
+    "gatsby": "^2.32.8",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-typegen": "^2.2.4",
     "gatsby-source-contentful": "^4.5.3",
