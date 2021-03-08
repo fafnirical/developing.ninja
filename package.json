@@ -29,7 +29,7 @@
     "@schemastore/lintstagedrc.schema": "0.0.2",
     "@types/dotenv-safe": "^8.1.1",
     "@types/eslint": "^7.2.6",
-    "@types/prettier": "^2.2.1",
+    "@types/prettier": "^2.2.2",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.2",
     "commitizen": "^4.2.3",
