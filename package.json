@@ -28,7 +28,7 @@
     "@schemastore/huskyrc": "0.0.3",
     "@schemastore/lintstagedrc.schema": "0.0.2",
     "@types/dotenv-safe": "^8.1.1",
-    "@types/eslint": "^7.2.7",
+    "@types/eslint": "^7.2.8",
     "@types/prettier": "^2.2.3",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
