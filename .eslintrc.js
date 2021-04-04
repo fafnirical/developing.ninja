@@ -32,7 +32,6 @@ module.exports = {
     'airbnb/hooks',
     'plugin:eslint-comments/recommended',
     'plugin:prettier/recommended',
-    'prettier/react',
   ],
   plugins: ['graphql'],
   rules: {
@@ -63,7 +62,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:import/typescript',
-        'prettier/@typescript-eslint',
+        'plugin:prettier/recommended',
       ],
       parserOptions: {
         project: 'tsconfig.json',
@@ -104,7 +103,7 @@ module.exports = {
     {
       files: ['**/*.js', '**/*.ts'],
       excludedFiles: ['src/**/*'],
-      extends: ['plugin:node/recommended'],
+      extends: ['plugin:node/recommended', 'plugin:prettier/recommended'],
     },
   ],
 };
