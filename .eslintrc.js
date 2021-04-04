@@ -21,7 +21,6 @@ module.exports = {
     'airbnb/hooks',
     'plugin:eslint-comments/recommended',
     'plugin:prettier/recommended',
-    'prettier/react',
   ],
   plugins: ['graphql'],
   rules: {
@@ -45,26 +44,18 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.js', '**/*.ts'],
-      excludedFiles: ['src/**/*'],
-      extends: ['plugin:node/recommended'],
-    },
-    {
       files: ['**/*.ts', '**/*.tsx'],
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:import/typescript',
-        'prettier/@typescript-eslint',
+        'plugin:prettier/recommended',
       ],
       parserOptions: {
         project: 'tsconfig.json',
       },
       settings: {
-        'import/parser': {
-          '@typescript-eslint/parser': ['.ts', '.tsx'],
-        },
-        'import-resolver': {
+        'import/resolver': {
           typescript: {
             alwaysTryTypes: true,
             project: 'tsconfig.json',
@@ -91,13 +82,6 @@ module.exports = {
         ],
         // Use TypeScript interfaces instead of prop-types.
         'react/prop-types': 'off',
-      },
-    },
-    {
-      files: ['**/*.d.ts'],
-      rules: {
-        'node/no-unpublished-import': 'off',
-        'node/no-unsupported-features/es-syntax': 'off',
       },
     },
   ],

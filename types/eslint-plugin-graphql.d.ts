@@ -18,8 +18,3 @@ declare module 'eslint-plugin-graphql' {
     'graphql/no-deprecated-fields': Linter.RuleEntry<[RuleProperties]>;
   }
 }
-
-type a = import('eslint').Linter.Config<
-  import('eslint/rules').ESLintRules & import('eslint-plugin-graphql').Rules
-> &
-  import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config;
