@@ -97,10 +97,5 @@ module.exports = {
         'react/prop-types': 'off',
       },
     },
-    {
-      files: ['**/*.js', '**/*.ts'],
-      excludedFiles: ['src/**/*'],
-      extends: ['plugin:node/recommended', 'plugin:prettier/recommended'],
-    },
   ],
 };
