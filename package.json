@@ -6,6 +6,7 @@
     "clean": "gatsby clean",
     "commit": "git-cz",
     "develop": "gatsby develop",
+    "prepare": "husky install",
     "serve": "gatsby serve",
     "start": "npm run develop"
   },
