@@ -1,5 +1,5 @@
 declare module 'eslint-plugin-graphql' {
-  import { Linter } from 'eslint';
+  import type { Linter } from 'eslint';
 
   export type RuleProperties = {
     env: 'lokka' | 'fraql' | 'relay' | 'apollo' | 'literal';
