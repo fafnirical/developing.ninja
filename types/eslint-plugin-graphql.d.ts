@@ -1,5 +1,5 @@
 declare module 'eslint-plugin-graphql' {
-  import { Linter } from 'eslint';
+  import type { Linter } from 'eslint';
 
   export type RuleProperties = {
     env: 'lokka' | 'fraql' | 'relay' | 'apollo' | 'literal';
@@ -18,8 +18,3 @@ declare module 'eslint-plugin-graphql' {
     'graphql/no-deprecated-fields': Linter.RuleEntry<[RuleProperties]>;
   }
 }
-
-type a = import('eslint').Linter.Config<
-  import('eslint/rules').ESLintRules & import('eslint-plugin-graphql').Rules
-> &
-  import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config;

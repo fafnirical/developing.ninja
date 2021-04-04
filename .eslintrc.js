@@ -68,10 +68,7 @@ module.exports = {
         project: 'tsconfig.json',
       },
       settings: {
-        'import/parser': {
-          '@typescript-eslint/parser': ['.ts', '.tsx'],
-        },
-        'import-resolver': {
+        'import/resolver': {
           typescript: {
             alwaysTryTypes: true,
             project: 'tsconfig.json',
@@ -99,11 +96,6 @@ module.exports = {
         // Use TypeScript interfaces instead of prop-types.
         'react/prop-types': 'off',
       },
-    },
-    {
-      files: ['**/*.js', '**/*.ts'],
-      excludedFiles: ['src/**/*'],
-      extends: ['plugin:node/recommended', 'plugin:prettier/recommended'],
     },
   ],
 };
