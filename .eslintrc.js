@@ -68,10 +68,7 @@ module.exports = {
         project: 'tsconfig.json',
       },
       settings: {
-        'import/parser': {
-          '@typescript-eslint/parser': ['.ts', '.tsx'],
-        },
-        'import-resolver': {
+        'import/resolver': {
           typescript: {
             alwaysTryTypes: true,
             project: 'tsconfig.json',
