@@ -6,6 +6,8 @@ require('dotenv-safe').config();
 module.exports = {
   plugins: [
     'gatsby-plugin-graphql-config',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-contentful',
       options: {
