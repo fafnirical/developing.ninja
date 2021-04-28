@@ -19,8 +19,8 @@
     "plugins": [
       {
         "name": "ts-graphql-plugin",
-        "schema": ".cache/schema.graphql",
-        "tag": "gql"
+        "schema": "src/gatsby-schema.graphql",
+        "tag": "graphql"
       }
     ]
   },
