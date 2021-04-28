@@ -1,11 +1,31 @@
 require('dotenv-safe').config();
 
 /**
- * @type {import('gatsby').GatsbyConfig}
+ * @type {import('gatsby').GatsbyConfig& {
+ *   plugins: Array<
+ *     | import('gatsby').PluginRef
+ *     | {
+ *         resolve: 'gatsby-plugin-typegen';
+ *         options: import('gatsby-plugin-typegen/types').PluginOptions;
+ *       }
+ *   >;
+ * }}
  */
 module.exports = {
   plugins: [
-    'gatsby-plugin-graphql-config',
+    {
+      resolve: 'gatsby-plugin-typegen',
+      options: {
+        language: 'typescript',
+        outputPath: './src/gatsby-graphql-types.d.ts',
+        emitSchema: {
+          './src/gatsby-schema.graphql': true,
+        },
+        emitPluginDocuments: {
+          './src/gatsby-plugin-documents.graphql': true,
+        },
+      },
+    },
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     {
