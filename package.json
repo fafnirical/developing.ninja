@@ -16,7 +16,7 @@
     "dotenv-safe": "^8.2.0",
     "gatsby": "^3.4.2",
     "gatsby-plugin-image": "^1.4.1",
-    "gatsby-plugin-sharp": "^3.4.2",
+    "gatsby-plugin-sharp": "^3.5.0",
     "gatsby-plugin-typegen": "^2.2.4",
     "gatsby-source-contentful": "^5.4.0",
     "react": "^17.0.2"
