@@ -11,7 +11,7 @@
     "start": "npm run develop"
   },
   "dependencies": {
-    "@types/node": "^15.12.4",
+    "@types/node": "^15.14.0",
     "@types/react": "^17.0.3",
     "dotenv-safe": "^8.2.0",
     "gatsby": "^3.7.2",
