@@ -47,7 +47,7 @@
     "graphql-config": "^4.0.1",
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
-    "prettier": "^2.3.2",
+    "prettier": "^2.5.0",
     "prettier-plugin-packagejson": "^2.2.11",
     "ts-graphql-plugin": "^2.1.4",
     "typescript": "^4.4.2"
