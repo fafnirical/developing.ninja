@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "@schemastore/lintstagedrc.schema": "0.0.2",
     "@types/dotenv-safe": "^8.1.2",
     "@types/eslint": "^7.28.0",
