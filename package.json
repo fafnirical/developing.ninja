@@ -1,6 +1,6 @@
 {
-  "name": "developing.ninja",
-  "version": "0.0.0",
+  "name": "@fafnirical/developing.ninja",
+  "private": true,
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
