@@ -1,4 +1,11 @@
-require('dotenv-safe').config();
+const { resolve } = require('path');
+
+const rootDir = resolve(process.cwd(), '../..');
+
+require('dotenv-safe').config({
+  path: resolve(rootDir, '.env'),
+  example: resolve(rootDir, '.env.example'),
+});
 
 /**
  * @type {import('gatsby').GatsbyConfig& {
@@ -32,7 +39,7 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: process.env.CONTENTFUL_DELIVERY_API_TOKEN,
         useNameForId: false,
       },
     },

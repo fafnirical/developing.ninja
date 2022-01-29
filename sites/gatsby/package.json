@@ -1,0 +1,27 @@
+{
+  "name": "@fafnirical/developing.ninja-gatsby",
+  "private": true,
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "start": "npm run develop"
+  },
+  "dependencies": {
+    "@types/dotenv-safe": "^8.1.2",
+    "@types/react": "^17.0.18",
+    "dotenv-safe": "^8.2.0",
+    "gatsby": "^4.5.4",
+    "gatsby-plugin-image": "^2.5.2",
+    "gatsby-plugin-sharp": "^4.5.2",
+    "gatsby-plugin-typegen": "^2.2.4",
+    "gatsby-source-contentful": "^7.3.2",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "eslint-plugin-graphql": "^4.0.0",
+    "graphql-config": "^4.1.0",
+    "ts-graphql-plugin": "^2.1.5"
+  }
+}
