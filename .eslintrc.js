@@ -1,15 +1,10 @@
-/**
- * @type {Partial<import('eslint-plugin-graphql').RuleProperties>}
- */
-const graphqlRuleConfig = {
-  env: 'literal',
-  tagName: 'graphql',
-};
+const { posix: path } = require('path');
+const { workspaces } = require('./package.json');
 
 /**
  * @type {import('eslint')
  *   .Linter.Config<
- *     import('eslint/rules').ESLintRules & import('eslint-plugin-graphql').Rules
+ *     import('eslint/rules').ESLintRules
  *   > &
  *     import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config
  * }
@@ -22,24 +17,7 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:prettier/recommended',
   ],
-  plugins: ['graphql'],
   rules: {
-    'graphql/template-strings': ['error', graphqlRuleConfig],
-    'graphql/named-operations': ['error', graphqlRuleConfig],
-    'graphql/capitalized-type-name': ['error', graphqlRuleConfig],
-    'graphql/no-deprecated-fields': ['error', graphqlRuleConfig],
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: [
-          '**/*.d.ts',
-          '**/.eslintrc.js',
-          '**/husky.config.js',
-          '**/prettier.config.js',
-          'apollo.config.js',
-        ],
-      },
-    ],
     'eslint-comments/no-unused-disable': 'error',
   },
   overrides: [
@@ -52,7 +30,12 @@ module.exports = {
         'plugin:prettier/recommended',
       ],
       parserOptions: {
-        project: 'tsconfig.json',
+        project: [
+          'tsconfig.json',
+          ...workspaces.map((workspace) =>
+            path.join(workspace, 'tsconfig.json'),
+          ),
+        ],
       },
       settings: {
         'import/resolver': {
@@ -86,3 +69,4 @@ module.exports = {
     },
   ],
 };
+// })();

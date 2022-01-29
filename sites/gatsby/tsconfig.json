@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "plugins": [
+      {
+        "name": "ts-graphql-plugin",
+        "schema": "src/gatsby-schema.graphql",
+        "tag": "graphql"
+      }
+    ]
+  },
+  "exclude": ["node_modules", ".cache", "public"]
+}

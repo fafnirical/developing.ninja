@@ -8,6 +8,6 @@ module.exports = {
   // JavaScript/TypeScript
   '*.{js,jsx,ts,tsx}': [
     'eslint --cache --cache-location node_modules/.cache/eslint --fix',
-    () => 'tsc --project tsconfig.json --noEmit',
+    () => ['tsc --noEmit', 'npx --workspaces tsc --noEmit'],
   ],
 };

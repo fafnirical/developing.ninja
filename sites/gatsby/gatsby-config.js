@@ -1,4 +1,11 @@
-require('dotenv-safe').config();
+const { resolve } = require('path');
+
+const rootDir = resolve(process.cwd(), '../..');
+
+require('dotenv-safe').config({
+  path: resolve(rootDir, '.env'),
+  example: resolve(rootDir, '.env.example'),
+});
 
 /**
  * @type {import('gatsby').GatsbyConfig& {
