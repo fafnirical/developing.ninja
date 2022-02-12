@@ -17,7 +17,7 @@
     "@schemastore/lintstagedrc.schema": "0.0.2",
     "@types/eslint": "^8.4.1",
     "@types/prettier": "^2.4.3",
-    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/experimental-utils": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "commitizen": "^4.2.4",
