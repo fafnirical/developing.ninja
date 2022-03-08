@@ -11,7 +11,7 @@ const graphqlRuleConfig = {
  *   .Linter.Config<
  *     import('eslint/rules').ESLintRules & import('eslint-plugin-graphql').Rules
  *   > &
- *     import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config
+ *     import('@typescript-eslint/utils').TSESLint.Linter.Config
  * }
  */
 module.exports = {

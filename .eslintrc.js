@@ -6,7 +6,7 @@ const { workspaces } = require('./package.json');
  *   .Linter.Config<
  *     import('eslint/rules').ESLintRules
  *   > &
- *     import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config
+ *     import('@typescript-eslint/utils').TSESLint.Linter.Config
  * }
  */
 module.exports = {
@@ -69,4 +69,3 @@ module.exports = {
     },
   ],
 };
-// })();
