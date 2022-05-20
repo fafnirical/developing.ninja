@@ -22,6 +22,6 @@
   "devDependencies": {
     "eslint-plugin-graphql": "^4.0.0",
     "graphql-config": "^4.1.0",
-    "ts-graphql-plugin": "^2.1.6"
+    "ts-graphql-plugin": "^2.1.7"
   }
 }
