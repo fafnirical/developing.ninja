@@ -6,6 +6,13 @@
   ],
   "scripts": {
     "commit": "git-cz",
+    "format": "concurrently npm:format:*",
+    "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
+    "format:prettier": "prettier --write .",
+    "lint": "concurrently npm:lint:*",
+    "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint .",
+    "lint:prettier": "prettier --check .",
+    "lint:typescript": "concurrently \"tsc --noEmit\" \"npx --workspaces tsc --noEmit\"",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -19,6 +26,7 @@
     "@typescript-eslint/parser": "^5.14.0",
     "@typescript-eslint/utils": "^5.14.0",
     "commitizen": "^4.2.4",
+    "concurrently": "^7.2.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.11.0",
     "eslint-config-airbnb": "^19.0.4",
