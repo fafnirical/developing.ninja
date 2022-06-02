@@ -14,13 +14,13 @@ jobs:
     strategy:
       matrix:
         lint-task:
-          - lint:eslint
-          - lint:prettier
-          - lint:typescript
+          - eslint
+          - prettier
+          - typescript
 
     steps:
       - uses: actions/checkout@v3
       - name: Install
         run: npm install
-      - name: Run lint task
-        run: npm run ${{ matrix.lint-task }}
+      - name: Run linting task
+        run: npm run lint:${{ matrix.lint-task }}
