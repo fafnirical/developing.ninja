@@ -20,13 +20,17 @@ jobs:
           - typescript
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
           cache: npm
+
       - name: Install
         run: npm ci
+
       - name: Run linting task
         run: npm run lint:${{ matrix.lint-task }}
