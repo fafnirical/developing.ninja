@@ -11,7 +11,7 @@ module.exports = {
   jsxSingleQuote: false,
   trailingComma: 'all',
   bracketSpacing: true,
-  jsxBracketSameLine: false,
+  bracketSameLine: false,
   arrowParens: 'always',
   requirePragma: false,
   insertPragma: false,
@@ -20,4 +20,5 @@ module.exports = {
   vueIndentScriptAndStyle: false,
   // endOfLine: 'lf', // Handled by EditorConfig.
   embeddedLanguageFormatting: 'auto',
+  singleAttributePerLine: false,
 };
