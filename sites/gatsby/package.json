@@ -13,7 +13,7 @@
     "@types/react": "^18.0.11",
     "dotenv-safe": "^8.2.0",
     "gatsby": "^4.16.0",
-    "gatsby-plugin-image": "^2.15.1",
+    "gatsby-plugin-image": "^2.16.1",
     "gatsby-plugin-sharp": "^4.16.1",
     "gatsby-plugin-typegen": "^2.2.4",
     "gatsby-source-contentful": "^7.13.1",
