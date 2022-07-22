@@ -26,7 +26,7 @@
     "@typescript-eslint/parser": "^5.30.5",
     "@typescript-eslint/utils": "^5.30.5",
     "commitizen": "^4.2.4",
-    "concurrently": "^7.2.2",
+    "concurrently": "^7.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.18.0",
     "eslint-config-airbnb": "^19.0.4",
