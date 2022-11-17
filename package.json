@@ -20,7 +20,7 @@
     "@commitlint/config-conventional": "^17.0.3",
     "@schemastore/lintstagedrc.schema": "0.0.2",
     "@types/eslint": "^8.4.10",
-    "@types/node": "^18.0.3",
+    "@types/node": "^18.11.9",
     "@types/prettier": "^2.6.3",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
