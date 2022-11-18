@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
-    "@commitlint/config-conventional": "^17.0.3",
+    "@commitlint/config-conventional": "^17.2.0",
     "@schemastore/lintstagedrc.schema": "0.0.2",
     "@types/eslint": "^8.4.10",
     "@types/node": "^18.11.9",
