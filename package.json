@@ -22,7 +22,7 @@
     "@types/eslint": "^8.4.10",
     "@types/node": "^18.11.12",
     "@types/prettier": "^2.7.1",
-    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
     "@typescript-eslint/utils": "^5.46.0",
     "commitizen": "^4.2.5",
