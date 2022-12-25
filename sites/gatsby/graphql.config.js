@@ -1,4 +1,4 @@
-const { existsSync } = require('fs');
+const { existsSync } = require('node:fs');
 
 const gatsbySchemaPath = './src/gatsby-schema.graphql';
 

@@ -1,4 +1,4 @@
-const { posix: path } = require('path');
+const { posix: path } = require('node:path');
 const { workspaces } = require('./package.json');
 
 /**
