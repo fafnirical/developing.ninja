@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/dotenv-safe": "^8.1.2",
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.0.33",
     "dotenv-safe": "^8.2.0",
     "gatsby": "^5.7.0",
     "gatsby-plugin-image": "^3.7.0",
