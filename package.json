@@ -23,7 +23,7 @@
     "@types/node": "^18.15.3",
     "@types/prettier": "^2.7.2",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
-    "@typescript-eslint/parser": "^5.55.0",
+    "@typescript-eslint/parser": "^5.58.0",
     "@typescript-eslint/utils": "^5.55.0",
     "commitizen": "^4.3.0",
     "concurrently": "^7.6.0",
