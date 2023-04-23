@@ -1,9 +1,6 @@
 {
   "name": "@fafnirical/developing.ninja",
   "private": true,
-  "workspaces": [
-    "./sites/*"
-  ],
   "scripts": {
     "commit": "git-cz",
     "format": "concurrently npm:format:*",
