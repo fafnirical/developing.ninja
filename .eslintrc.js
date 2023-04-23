@@ -1,6 +1,3 @@
-const { posix: path } = require('path');
-const { workspaces } = require('./package.json');
-
 /**
  * @type {import('eslint')
  *   .Linter.Config<
@@ -30,12 +27,7 @@ module.exports = {
         'plugin:prettier/recommended',
       ],
       parserOptions: {
-        project: [
-          'tsconfig.json',
-          ...workspaces.map((workspace) =>
-            path.join(workspace, 'tsconfig.json'),
-          ),
-        ],
+        project: ['tsconfig.json'],
       },
       settings: {
         'import/resolver': {
