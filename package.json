@@ -1,9 +1,6 @@
 {
   "name": "@fafnirical/developing.ninja",
   "private": true,
-  "workspaces": [
-    "./sites/*"
-  ],
   "scripts": {
     "commit": "git-cz",
     "format": "concurrently npm:format:*",
@@ -12,7 +9,7 @@
     "lint": "concurrently npm:lint:*",
     "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint .",
     "lint:prettier": "prettier --check .",
-    "lint:typescript": "concurrently \"tsc --noEmit\" \"npx --workspaces tsc --noEmit\"",
+    "lint:typescript": "concurrently \"tsc --noEmit\"",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -45,7 +42,6 @@
     "typescript": "^4.9.5"
   },
   "engines": {
-    "node": "^18.12.0",
-    "npm:": "^8"
+    "node": "^18.12.0"
   }
 }
