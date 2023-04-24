@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx --no -- commitlint --edit "${1}"
+# Temporarily disabled until https://github.com/TypeStrong/ts-node/pull/1958 is released.
+# npx --no -- commitlint --edit "${1}"
