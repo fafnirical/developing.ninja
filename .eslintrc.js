@@ -11,11 +11,11 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb/hooks',
-    'plugin:eslint-comments/recommended',
+    'plugin:@eslint-community/eslint-comments/recommended',
     'plugin:prettier/recommended',
   ],
   rules: {
-    'eslint-comments/no-unused-disable': 'error',
+    '@eslint-community/eslint-comments/no-unused-disable': 'error',
   },
   overrides: [
     {
