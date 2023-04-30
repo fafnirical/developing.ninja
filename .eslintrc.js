@@ -12,7 +12,7 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'plugin:@eslint-community/eslint-comments/recommended',
-    'plugin:prettier/recommended',
+    'prettier',
   ],
   rules: {
     '@eslint-community/eslint-comments/no-unused-disable': 'error',
@@ -24,7 +24,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:import/typescript',
-        'plugin:prettier/recommended',
+        'prettier',
       ],
       parserOptions: {
         project: ['tsconfig.json'],
