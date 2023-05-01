@@ -5,9 +5,11 @@
     "commit": "git-cz",
     "format": "concurrently npm:format:*",
     "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
+    "format:package-json": "sort-package-json",
     "format:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --write .",
     "lint": "concurrently npm:lint:*",
     "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint .",
+    "lint:package-json": "sort-package-json --check",
     "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --check .",
     "lint:typescript": "concurrently \"tsc --noEmit\"",
     "prepare": "husky install"
@@ -39,7 +41,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
-    "prettier-plugin-packagejson": "^2.4.3",
+    "sort-package-json": "^2.4.1",
     "typescript": "^5.0.4"
   },
   "engines": {
