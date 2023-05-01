@@ -19,6 +19,25 @@ module.exports = {
   },
   overrides: [
     {
+      // This override acts only as a list of file extensions to lint.
+      files: [
+        '**/.*.js',
+        '**/*.js',
+        '**/.*.cjs',
+        '**/*.cjs',
+        '**/.*.mjs',
+        '**/*.mjs',
+        '**/*.jsx',
+        '**/.*.ts',
+        '**/*.ts',
+        '**/.*.cts',
+        '**/*.cts',
+        '**/.*.mts',
+        '**/*.mts',
+        '**/*.tsx',
+      ],
+    },
+    {
       files: ['**/*.ts', '**/*.tsx'],
       extends: [
         'plugin:@typescript-eslint/recommended',
