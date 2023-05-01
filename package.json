@@ -5,10 +5,10 @@
     "commit": "git-cz",
     "format": "concurrently npm:format:*",
     "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
-    "format:prettier": "prettier --write .",
+    "format:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --write .",
     "lint": "concurrently npm:lint:*",
     "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint .",
-    "lint:prettier": "prettier --check .",
+    "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --check .",
     "lint:typescript": "concurrently \"tsc --noEmit\"",
     "prepare": "husky install"
   },

@@ -1,4 +1,5 @@
-const prettier = 'prettier --write';
+const prettier =
+  'prettier --cache --cache-location node_modules/.cache/prettier --write';
 
 /**
  * @type {import('@schemastore/lintstagedrc.schema').BasicConfig}
