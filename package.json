@@ -3,11 +3,11 @@
   "private": true,
   "scripts": {
     "commit": "git-cz",
-    "format": "concurrently npm:format:*",
+    "format": "concurrently --names \"format:\" \"npm:format:*(!prettier)\" && npm run format:prettier",
     "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
     "format:package-json": "sort-package-json",
     "format:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --write .",
-    "lint": "concurrently npm:lint:*",
+    "lint": "concurrently --names \"lint:\" \"npm:lint:*\"",
     "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint .",
     "lint:package-json": "sort-package-json --check",
     "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --check .",
