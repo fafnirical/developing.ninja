@@ -1,17 +1,35 @@
-const prettier =
-  'prettier --cache --cache-location node_modules/.cache/prettier --write';
-
 /**
  * @type {import('@schemastore/lintstagedrc.schema').BasicConfig}
  */
-module.exports = {
-  '*, !*.{js,jsx,ts,tsx}, !package.json': `${prettier} --ignore-unknown`,
-
+const config = {
   '*.{js,jsx,ts,tsx}': [
     () => ['tsc --noEmit'],
     'eslint --cache --cache-location node_modules/.cache/eslint --fix',
-    prettier,
   ],
 
-  'package.json': ['sort-package-json', prettier],
+  'package.json': 'sort-package-json',
 };
+
+const prettier =
+  'prettier --cache --cache-location node_modules/.cache/prettier --write --ignore-unknown';
+
+module.exports = Object.fromEntries([
+  // Add prettier to each linter task or task list.
+  ...Object.entries(config).map(([pattern, linter]) => [
+    pattern,
+    [...(Array.isArray(linter) ? linter : [linter]), prettier],
+  ]),
+
+  // Format everything else with prettier.
+  [
+    [
+      '*',
+      Object.keys(config).map((pattern) =>
+        pattern.split(', ').map((subpattern) => `!${subpattern}`),
+      ),
+    ]
+      .flat(2)
+      .join(', '),
+    prettier,
+  ],
+]);
