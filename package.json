@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
-    "@commitlint/config-conventional": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.3",
     "@schemastore/lintstagedrc.schema": "0.0.3",
     "@tsconfig/node18": "^2.0.0",
     "@tsconfig/strictest": "^2.0.1",
