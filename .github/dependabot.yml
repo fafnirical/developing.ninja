@@ -15,6 +15,9 @@ updates:
       prefix: chore
       include: scope
     groups:
+      commitlint:
+        patterns:
+          - '@commitlint/*'
       typescript-eslint:
         patterns:
           - '@typescript-eslint/*'
