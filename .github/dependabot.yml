@@ -14,3 +14,7 @@ updates:
     commit-message:
       prefix: chore
       include: scope
+    groups:
+      typescript-eslint:
+        patterns:
+          - '@typescript-eslint/*'
