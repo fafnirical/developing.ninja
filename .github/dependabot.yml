@@ -18,6 +18,9 @@ updates:
       commitlint:
         patterns:
           - '@commitlint/*'
+      tsconfig:
+        patterns:
+          - '@tsconfig/*'
       typescript-eslint:
         patterns:
           - '@typescript-eslint/*'
