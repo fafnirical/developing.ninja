@@ -11,20 +11,39 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb/hooks',
-    'plugin:eslint-comments/recommended',
-    'plugin:prettier/recommended',
+    'plugin:@eslint-community/eslint-comments/recommended',
+    'prettier',
   ],
   rules: {
-    'eslint-comments/no-unused-disable': 'error',
+    '@eslint-community/eslint-comments/no-unused-disable': 'error',
   },
   overrides: [
+    {
+      // This override acts only as a list of file extensions to lint.
+      files: [
+        '**/.*.js',
+        '**/*.js',
+        '**/.*.cjs',
+        '**/*.cjs',
+        '**/.*.mjs',
+        '**/*.mjs',
+        '**/*.jsx',
+        '**/.*.ts',
+        '**/*.ts',
+        '**/.*.cts',
+        '**/*.cts',
+        '**/.*.mts',
+        '**/*.mts',
+        '**/*.tsx',
+      ],
+    },
     {
       files: ['**/*.ts', '**/*.tsx'],
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:import/typescript',
-        'plugin:prettier/recommended',
+        'prettier',
       ],
       parserOptions: {
         project: ['tsconfig.json'],

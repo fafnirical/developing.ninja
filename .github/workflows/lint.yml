@@ -16,6 +16,7 @@ jobs:
       matrix:
         lint-task:
           - eslint
+          - package-json
           - prettier
           - typescript
 
