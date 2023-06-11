@@ -14,3 +14,13 @@ updates:
     commit-message:
       prefix: chore
       include: scope
+    groups:
+      commitlint:
+        patterns:
+          - '@commitlint/*'
+      tsconfig:
+        patterns:
+          - '@tsconfig/*'
+      typescript-eslint:
+        patterns:
+          - '@typescript-eslint/*'
