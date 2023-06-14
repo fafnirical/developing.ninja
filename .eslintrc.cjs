@@ -9,8 +9,7 @@
 module.exports = {
   root: true,
   extends: [
-    'airbnb',
-    'airbnb/hooks',
+    'airbnb-base',
     'plugin:@eslint-community/eslint-comments/recommended',
     'prettier',
   ],
@@ -38,7 +37,15 @@ module.exports = {
       ],
     },
     {
-      files: ['**/*.ts', '**/*.tsx'],
+      files: [
+        '**/.*.ts',
+        '**/*.ts',
+        '**/.*.cts',
+        '**/*.cts',
+        '**/.*.mts',
+        '**/*.mts',
+        '**/*.tsx',
+      ],
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
@@ -46,36 +53,13 @@ module.exports = {
         'prettier',
       ],
       parserOptions: {
-        project: ['tsconfig.json'],
+        project: true,
+        tsconfigRootDir: __dirname,
       },
       settings: {
         'import/resolver': {
-          typescript: {
-            alwaysTryTypes: true,
-            project: 'tsconfig.json',
-          },
+          typescript: true,
         },
-      },
-      rules: {
-        'import/extensions': [
-          'error',
-          'ignorePackages',
-          {
-            js: 'never',
-            mjs: 'never',
-            jsx: 'never',
-            ts: 'never',
-            tsx: 'never',
-          },
-        ],
-        'react/jsx-filename-extension': [
-          'error',
-          {
-            extensions: ['.tsx'],
-          },
-        ],
-        // Use TypeScript interfaces instead of prop-types.
-        'react/prop-types': 'off',
       },
     },
   ],
