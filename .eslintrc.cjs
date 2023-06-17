@@ -11,8 +11,22 @@ module.exports = {
   extends: [
     'airbnb-base',
     'plugin:@eslint-community/eslint-comments/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:@typescript-eslint/strict',
+    'plugin:import/typescript',
     'prettier',
   ],
+  parserOptions: {
+    project: true,
+    tsconfigRootDir: __dirname,
+  },
+  settings: {
+    'import/resolver': {
+      node: true,
+      typescript: true,
+    },
+  },
   rules: {
     '@eslint-community/eslint-comments/no-unused-disable': 'error',
   },
@@ -35,33 +49,6 @@ module.exports = {
         '**/*.mts',
         '**/*.tsx',
       ],
-    },
-    {
-      files: [
-        '**/.*.ts',
-        '**/*.ts',
-        '**/.*.cts',
-        '**/*.cts',
-        '**/.*.mts',
-        '**/*.mts',
-        '**/*.tsx',
-      ],
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'plugin:@typescript-eslint/strict',
-        'plugin:import/typescript',
-        'prettier',
-      ],
-      parserOptions: {
-        project: true,
-        tsconfigRootDir: __dirname,
-      },
-      settings: {
-        'import/resolver': {
-          typescript: true,
-        },
-      },
     },
   ],
 };

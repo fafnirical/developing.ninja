@@ -16,6 +16,7 @@ const prettier =
 /**
  * @type {import('@schemastore/lintstagedrc.schema').BasicConfig}
  */
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- TODO: Fix the typings for the Prettier entries.
 const config = Object.fromEntries([
   // Add prettier to each linter task or task list.
   ...Object.entries(baseConfig).map(([pattern, linter]) => [
