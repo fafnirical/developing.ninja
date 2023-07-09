@@ -7,7 +7,6 @@
  * }
  */
 module.exports = {
-  root: true,
   extends: [
     'airbnb-base',
     'plugin:@eslint-community/eslint-comments/recommended',
@@ -15,21 +14,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/strict',
     'plugin:import/typescript',
+    'plugin:perfectionist/recommended-natural',
     'prettier',
   ],
-  parserOptions: {
-    project: true,
-    tsconfigRootDir: __dirname,
-  },
-  settings: {
-    'import/resolver': {
-      node: true,
-      typescript: true,
-    },
-  },
-  rules: {
-    '@eslint-community/eslint-comments/no-unused-disable': 'error',
-  },
   overrides: [
     {
       // This override acts only as a list of file extensions to lint.
@@ -51,4 +38,28 @@ module.exports = {
       ],
     },
   ],
+  parserOptions: {
+    project: true,
+    tsconfigRootDir: __dirname,
+  },
+  root: true,
+  rules: {
+    // Report on unused disable directives.
+    // This has the same effect as the `--report-unused-disable-directives` flag.
+    '@eslint-community/eslint-comments/no-unused-disable': 'error',
+
+    // Turn off rules that potentially conflict with eslint-plugin-perfectionist.
+    '@typescript-eslint/adjacent-overload-signatures': 'off',
+    '@typescript-eslint/sort-type-constituents': 'off',
+    'import/order': 'off',
+    'react/jsx-sort-props': 'off',
+    'sort-imports': 'off',
+    'sort-keys': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      node: true,
+      typescript: true,
+    },
+  },
 };
