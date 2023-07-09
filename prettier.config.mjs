@@ -2,23 +2,23 @@
  * @type {import('prettier').Options}
  */
 export default {
-  printWidth: 80,
-  // tabWidth: 2, // Handled by EditorConfig.
-  // useTabs: false, // Handled by EditorConfig.
-  semi: true,
-  singleQuote: true,
-  quoteProps: 'as-needed',
-  jsxSingleQuote: false,
-  trailingComma: 'all',
-  bracketSpacing: true,
-  bracketSameLine: false,
   arrowParens: 'always',
-  requirePragma: false,
-  insertPragma: false,
-  proseWrap: 'always',
-  htmlWhitespaceSensitivity: 'ignore',
-  vueIndentScriptAndStyle: false,
-  // endOfLine: 'lf', // Handled by EditorConfig.
+  bracketSameLine: false,
+  bracketSpacing: true,
   embeddedLanguageFormatting: 'auto',
+  // endOfLine: 'lf', // Handled by EditorConfig.
+  htmlWhitespaceSensitivity: 'ignore',
+  insertPragma: false,
+  jsxSingleQuote: false,
+  printWidth: 80,
+  proseWrap: 'always',
+  quoteProps: 'as-needed',
+  requirePragma: false,
+  semi: true,
   singleAttributePerLine: false,
+  singleQuote: true,
+  // tabWidth: 2, // Handled by EditorConfig.
+  trailingComma: 'all',
+  // useTabs: false, // Handled by EditorConfig.
+  vueIndentScriptAndStyle: false,
 };
