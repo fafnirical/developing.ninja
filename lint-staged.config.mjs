@@ -1,5 +1,11 @@
 /**
- * @type {import('@schemastore/lintstagedrc.schema').BasicConfig}
+ * @typedef {string | string[]} Task
+ * @typedef {(filenames: string[]) => Task | Promise<Task>} FunctionTask
+ * @typedef {Record<string, Task | FunctionTask | (Task | FunctionTask)[]> | FunctionTask} Config
+ */
+
+/**
+ * @type {Config}
  */
 const baseConfig = {
   '*.{js,jsx,ts,tsx}': [
@@ -14,7 +20,7 @@ const prettier =
   'prettier --cache --cache-location node_modules/.cache/prettier --write --ignore-unknown';
 
 /**
- * @type {import('@schemastore/lintstagedrc.schema').BasicConfig}
+ * @type {Config}
  */
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- TODO: Fix the typings for the Prettier entries.
 const config = Object.fromEntries([
