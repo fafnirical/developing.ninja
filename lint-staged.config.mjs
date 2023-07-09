@@ -1,11 +1,11 @@
 /**
- * @typedef {string | string[] | ((filenames: string[]) => string | string[] | Promise<string | string[]>)} Task
- * @typedef {Record<string, Task | Task[]>} Config
- * @typedef {Config | ((filenames: string[]) => Config)} UserConfig
+ * @typedef {string | string[]} Task
+ * @typedef {(filenames: string[]) => Task | Promise<Task>} FunctionTask
+ * @typedef {Record<string, Task | FunctionTask | (Task | FunctionTask)[]> | FunctionTask} Config
  */
 
 /**
- * @type {UserConfig}
+ * @type {Config}
  */
 const baseConfig = {
   '*.{js,jsx,ts,tsx}': [
@@ -20,7 +20,7 @@ const prettier =
   'prettier --cache --cache-location node_modules/.cache/prettier --write --ignore-unknown';
 
 /**
- * @type {UserConfig}
+ * @type {Config}
  */
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- TODO: Fix the typings for the Prettier entries.
 const config = Object.fromEntries([
