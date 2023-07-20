@@ -21,5 +21,6 @@
     "**/.*.mts",
     "**/*.mts",
     "**/*.tsx"
-  ]
+  ],
+  "exclude": ["node_modules", "sites/*"]
 }

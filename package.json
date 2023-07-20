@@ -1,6 +1,9 @@
 {
   "name": "@fafnirical/developing.ninja",
   "private": true,
+  "workspaces": [
+    "sites/*"
+  ],
   "scripts": {
     "commit": "git-cz",
     "format": "concurrently --names \"format:\" \"npm:format:*(!prettier)\" && npm run format:prettier",
@@ -11,7 +14,7 @@
     "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --ignore-path .gitignore .",
     "lint:package-json": "sort-package-json --check",
     "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --ignore-path .gitignore --check .",
-    "lint:typescript": "concurrently \"tsc --noEmit\"",
+    "lint:typescript": "npx --workspaces --include-workspace-root tsc --noEmit",
     "prepare": "husky install"
   },
   "devDependencies": {
