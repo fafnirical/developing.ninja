@@ -17,7 +17,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
-    "@eslint-community/eslint-plugin-eslint-comments": "^3.2.1",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.1.0",
     "@tsconfig/node18": "^18.2.0",
     "@tsconfig/strictest": "^2.0.1",
     "@types/eslint": "^8.44.0",
