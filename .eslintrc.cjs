@@ -8,11 +8,9 @@
  */
 module.exports = {
   extends: [
-    'airbnb-base',
+    '@remix-run/eslint-config',
+    '@remix-run/eslint-config/node',
     'plugin:@eslint-community/eslint-comments/recommended',
-    'plugin:@typescript-eslint/strict-type-checked',
-    'plugin:@typescript-eslint/stylistic-type-checked',
-    'plugin:import/typescript',
     'plugin:perfectionist/recommended-natural',
     'prettier',
   ],
@@ -54,11 +52,5 @@ module.exports = {
     'react/jsx-sort-props': 'off',
     'sort-imports': 'off',
     'sort-keys': 'off',
-  },
-  settings: {
-    'import/resolver': {
-      node: true,
-      typescript: true,
-    },
   },
 };

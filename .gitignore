@@ -1,5 +1,6 @@
-# Dependencies
-node_modules/
+node_modules
 
-# Private files
-/.env
+/.cache
+/build
+/public/build
+.env
