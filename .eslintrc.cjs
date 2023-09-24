@@ -7,9 +7,28 @@
  * }
  */
 module.exports = {
+  env: {
+    browser: true,
+    node: true,
+  },
   extends: [
-    '@remix-run/eslint-config',
-    '@remix-run/eslint-config/node',
+    // JS
+    'eslint:recommended',
+    'plugin:import/recommended',
+
+    // React
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+    'plugin:import/react',
+    'plugin:jsx-a11y/recommended',
+
+    // TypeScript
+    'plugin:@typescript-eslint/strict-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
+    'plugin:import/typescript',
+
+    // Stylistic
     'plugin:@eslint-community/eslint-comments/recommended',
     'plugin:perfectionist/recommended-natural',
     'prettier',
@@ -52,5 +71,23 @@ module.exports = {
     'react/jsx-sort-props': 'off',
     'sort-imports': 'off',
     'sort-keys': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      node: true,
+      typescript: true,
+    },
+    react: {
+      linkComponents: [
+        {
+          linkAttribute: 'to',
+          name: 'Link',
+        },
+        {
+          linkAttribute: 'to',
+          name: 'NavLink',
+        },
+      ],
+    },
   },
 };

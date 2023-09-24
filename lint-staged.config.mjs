@@ -22,7 +22,7 @@ const prettier =
 /**
  * @type {Config}
  */
-
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const config = Object.fromEntries([
   // Add prettier to each linter task or task list.
   ...Object.entries(baseConfig).map(([pattern, linter]) => [
