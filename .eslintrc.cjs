@@ -7,12 +7,29 @@
  * }
  */
 module.exports = {
+  env: {
+    browser: true,
+    node: true,
+  },
   extends: [
-    'airbnb-base',
-    'plugin:@eslint-community/eslint-comments/recommended',
+    // JS
+    'eslint:recommended',
+    'plugin:import/recommended',
+
+    // React
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+    'plugin:import/react',
+    'plugin:jsx-a11y/recommended',
+
+    // TypeScript
     'plugin:@typescript-eslint/strict-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
     'plugin:import/typescript',
+
+    // Stylistic
+    'plugin:@eslint-community/eslint-comments/recommended',
     'plugin:perfectionist/recommended-natural',
     'prettier',
   ],
@@ -59,6 +76,18 @@ module.exports = {
     'import/resolver': {
       node: true,
       typescript: true,
+    },
+    react: {
+      linkComponents: [
+        {
+          linkAttribute: 'to',
+          name: 'Link',
+        },
+        {
+          linkAttribute: 'to',
+          name: 'NavLink',
+        },
+      ],
     },
   },
 };
