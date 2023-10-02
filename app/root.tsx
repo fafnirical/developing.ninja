@@ -1,4 +1,4 @@
-import type { LinksFunction } from '@remix-run/node';
+import type { LinkDescriptor, LinksFunction } from '@remix-run/node';
 
 import { cssBundleHref } from '@remix-run/css-bundle';
 import {
@@ -10,9 +10,21 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
-export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ href: cssBundleHref, rel: 'stylesheet' }] : []),
-];
+import tailwindStyleSheetUrl from './styles/tailwind.css';
+
+export const links: LinksFunction = () => {
+  return [
+    // Preload CSS to avoid render blocking.
+    { as: 'style', href: tailwindStyleSheetUrl, rel: 'preload' },
+    ...(cssBundleHref
+      ? [{ as: 'style', href: cssBundleHref, rel: 'preload' }]
+      : []),
+
+    // Actually load CSS later to avoid render blocking.
+    { href: tailwindStyleSheetUrl, rel: 'stylesheet' },
+    ...(cssBundleHref ? [{ href: cssBundleHref, rel: 'stylesheet' }] : []),
+  ] satisfies LinkDescriptor[];
+};
 
 export default function App() {
   return (
