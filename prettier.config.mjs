@@ -10,6 +10,7 @@ export default {
   htmlWhitespaceSensitivity: 'ignore',
   insertPragma: false,
   jsxSingleQuote: false,
+  plugins: ['prettier-plugin-tailwindcss'],
   printWidth: 80,
   proseWrap: 'always',
   quoteProps: 'as-needed',
