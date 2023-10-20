@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/config-conventional": "^18.0.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.1.0",
     "@remix-run/dev": "^2.0.1",
     "@tsconfig/node18": "^18.2.2",
