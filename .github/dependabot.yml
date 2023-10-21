@@ -24,3 +24,7 @@ updates:
       typescript-eslint:
         patterns:
           - '@typescript-eslint/*'
+      remix:
+        patterns:
+          - '@remix-run/*'
+          - '@tsconfig/remix'
