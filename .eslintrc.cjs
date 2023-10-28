@@ -76,6 +76,7 @@ module.exports = {
       typescript: true,
     },
     react: {
+      formComponents: ['Form'],
       linkComponents: [
         {
           linkAttribute: 'to',
