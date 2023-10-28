@@ -29,5 +29,6 @@
     "**/.*.mts",
     "**/*.mts",
     "**/*.tsx"
-  ]
+  ],
+  "exclude": ["node_modules", "./.cache", "./build", "./public/build"]
 }
