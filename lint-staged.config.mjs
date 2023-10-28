@@ -8,7 +8,7 @@
  * @type {Config}
  */
 const baseConfig = {
-  '*.{js,jsx,ts,tsx}': [
+  '*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}': [
     () => ['tsc --noEmit'],
     'eslint --cache --cache-location node_modules/.cache/eslint --fix',
   ],
