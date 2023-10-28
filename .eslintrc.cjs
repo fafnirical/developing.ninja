@@ -60,12 +60,10 @@ module.exports = {
   },
   root: true,
   rules: {
-    // Report on unused disable directives.
-    // This has the same effect as the `--report-unused-disable-directives` flag.
     '@eslint-community/eslint-comments/no-unused-disable': 'error',
-
-    // Turn off rules that potentially conflict with eslint-plugin-perfectionist.
     '@typescript-eslint/adjacent-overload-signatures': 'off',
+    '@typescript-eslint/consistent-type-exports': 'error',
+    '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/sort-type-constituents': 'off',
     'import/order': 'off',
     'react/jsx-sort-props': 'off',
