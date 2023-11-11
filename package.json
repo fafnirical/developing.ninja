@@ -34,7 +34,7 @@
     "@eslint-community/eslint-plugin-eslint-comments": "^4.1.0",
     "@remix-run/dev": "^2.1.0",
     "@tsconfig/node18": "^18.2.2",
-    "@tsconfig/remix": "^2.0.1",
+    "@tsconfig/remix": "^2.0.2",
     "@tsconfig/strictest": "^2.0.2",
     "@types/eslint": "^8.44.6",
     "@types/node": "^18.18.7",
