@@ -86,6 +86,7 @@ const config = {
           name: 'NavLink',
         },
       ],
+      version: 'detect',
     },
   },
 };
