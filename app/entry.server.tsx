@@ -8,7 +8,7 @@ import type { EntryContext } from '@remix-run/node';
 
 import { createReadableStreamFromReadable } from '@remix-run/node';
 import { RemixServer } from '@remix-run/react';
-import isbot from 'isbot';
+import { isbot } from 'isbot';
 import { PassThrough } from 'node:stream';
 import { renderToPipeableStream } from 'react-dom/server';
 
@@ -20,7 +20,9 @@ export default function handleRequest(
   responseHeaders: Headers,
   remixContext: EntryContext,
 ) {
-  return isbot(request.headers.get('user-agent'))
+  const userAgent = request.headers.get('user-agent');
+
+  return !userAgent || isbot(userAgent)
     ? handleBotRequest(
         request,
         responseStatusCode,
