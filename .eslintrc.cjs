@@ -1,12 +1,11 @@
 /**
- * @type {import('eslint')
- *   .Linter.Config<
+ * @type {import('eslint').Linter.Config<
  *     import('eslint/rules').ESLintRules
  *   > &
- *     import('@typescript-eslint/utils').TSESLint.Linter.Config
+ *     import('@typescript-eslint/utils').TSESLint.ClassicConfig.Config
  * }
  */
-module.exports = {
+const config = {
   env: {
     browser: true,
     node: true,
@@ -87,6 +86,9 @@ module.exports = {
           name: 'NavLink',
         },
       ],
+      version: 'detect',
     },
   },
 };
+
+module.exports = config;
