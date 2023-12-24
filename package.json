@@ -33,7 +33,7 @@
     "@commitlint/config-conventional": "^18.4.3",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.1.0",
     "@remix-run/dev": "^2.4.1",
-    "@tsconfig/node18": "^18.2.2",
+    "@tsconfig/node20": "^20.1.2",
     "@tsconfig/remix": "^2.0.3",
     "@tsconfig/strictest": "^2.0.2",
     "@types/eslint": "^8.56.0",

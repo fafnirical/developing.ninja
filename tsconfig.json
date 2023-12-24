@@ -1,7 +1,7 @@
 {
   "extends": [
     "@tsconfig/strictest/tsconfig.json",
-    "@tsconfig/node18/tsconfig.json",
+    "@tsconfig/node20/tsconfig.json",
     "@tsconfig/remix/tsconfig.json"
   ],
   "compilerOptions": {
@@ -11,7 +11,7 @@
 
     "noEmit": true,
 
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "lib": ["DOM", "DOM.Iterable", "ES2023"],
     "target": "ES2022"
   },
   "include": [
