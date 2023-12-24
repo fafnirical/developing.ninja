@@ -1,5 +1,5 @@
 /**
- * @type {import('prettier').Options}
+ * @type {import('prettier').Config}
  */
 const config = {
   arrowParens: 'always',
