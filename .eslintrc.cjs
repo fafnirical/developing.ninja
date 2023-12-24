@@ -6,7 +6,7 @@
  *     import('@typescript-eslint/utils').TSESLint.Linter.Config
  * }
  */
-module.exports = {
+const config = {
   env: {
     browser: true,
     node: true,
@@ -90,3 +90,5 @@ module.exports = {
     },
   },
 };
+
+module.exports = config;

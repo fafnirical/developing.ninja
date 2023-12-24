@@ -1,7 +1,7 @@
 /**
  * @type {import('prettier').Options}
  */
-export default {
+const config = {
   arrowParens: 'always',
   bracketSameLine: false,
   bracketSpacing: true,
@@ -23,3 +23,5 @@ export default {
   // useTabs: false, // Handled by EditorConfig.
   vueIndentScriptAndStyle: false,
 };
+
+export default config;
