@@ -20,10 +20,10 @@
     "start": "remix-serve ./build/index.js"
   },
   "dependencies": {
-    "@remix-run/css-bundle": "^2.4.1",
-    "@remix-run/node": "^2.4.1",
-    "@remix-run/react": "^2.4.1",
-    "@remix-run/serve": "^2.4.1",
+    "@remix-run/css-bundle": "^2.5.0",
+    "@remix-run/node": "^2.5.0",
+    "@remix-run/react": "^2.5.0",
+    "@remix-run/serve": "^2.5.0",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -32,7 +32,7 @@
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.1.0",
-    "@remix-run/dev": "^2.4.1",
+    "@remix-run/dev": "^2.5.0",
     "@tsconfig/node20": "^20.1.2",
     "@tsconfig/remix": "^2.0.3",
     "@tsconfig/strictest": "^2.0.2",
