@@ -20,9 +20,7 @@ export default function handleRequest(
   responseHeaders: Headers,
   remixContext: EntryContext,
 ) {
-  const userAgent = request.headers.get('user-agent');
-
-  return !userAgent || isbot(userAgent)
+  return isbot(request.headers.get('user-agent'))
     ? handleBotRequest(
         request,
         responseStatusCode,
