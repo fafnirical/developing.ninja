@@ -16,7 +16,7 @@
     "lint:package-json": "sort-package-json --check",
     "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --ignore-path .gitignore --check .",
     "lint:typescript": "tsc --noEmit",
-    "prepare": "husky install",
+    "prepare": "husky",
     "start": "remix-serve ./build/index.js"
   },
   "dependencies": {
