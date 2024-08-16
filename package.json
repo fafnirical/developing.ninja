@@ -31,7 +31,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
     "@remix-run/dev": "^2.9.1",
     "@tsconfig/node20": "^20.1.2",
     "@tsconfig/remix": "^2.0.5",
