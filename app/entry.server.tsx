@@ -76,7 +76,7 @@ function handleBotRequest(
           }
         },
         onShellError(error: unknown) {
-          reject(error);
+          reject(error as Error);
         },
       },
     );
@@ -110,7 +110,7 @@ function handleBrowserRequest(
           }
         },
         onShellError(error: unknown) {
-          reject(error);
+          reject(error as Error);
         },
         onShellReady() {
           shellRendered = true;
