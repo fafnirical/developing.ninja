@@ -8,6 +8,7 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
+  "eslint.useFlatConfig": true,
   "files.associations": {
     "*.css": "tailwindcss"
   },
