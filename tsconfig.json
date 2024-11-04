@@ -5,10 +5,6 @@
     "@tsconfig/remix/tsconfig.json"
   ],
   "compilerOptions": {
-    "paths": {
-      "~/*": ["./app/*"]
-    },
-
     "noEmit": true,
 
     "forceConsistentCasingInFileNames": true,
