@@ -8,10 +8,13 @@
     "paths": {
       "~/*": ["./app/*"]
     },
+    "types": ["@remix-run/node", "vite/client"],
 
     "noEmit": true,
 
-    "lib": ["DOM", "DOM.Iterable", "ES2023"],
+    "forceConsistentCasingInFileNames": true,
+
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "target": "ES2022"
   },
   "include": [
@@ -30,5 +33,5 @@
     "**/*.mts",
     "**/*.tsx"
   ],
-  "exclude": ["node_modules", "./.cache", "./build", "./public/build"]
+  "exclude": ["node_modules", "./.cache", "./build"]
 }

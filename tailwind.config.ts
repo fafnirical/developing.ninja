@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config = {
-  content: ['./app/**/*.{js,jsx,ts,tsx}'],
+  content: ['./app/**/{**,.client,.server}/**/*.{ts,tsx}'],
 } satisfies Config;
 
 export default config;

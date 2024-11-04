@@ -1,32 +1,21 @@
-import type { LinkDescriptor, LinksFunction } from '@remix-run/node';
+import type { LinksFunction } from '@remix-run/node';
+import type { ReactNode } from 'react';
 
-import { cssBundleHref } from '@remix-run/css-bundle';
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
 
-import tailwindStyleSheetUrl from './styles/tailwind.css';
+import tailwindStyleSheetUrl from './tailwind.css?url';
 
-export const links: LinksFunction = () => {
-  return [
-    // Preload CSS to avoid render blocking.
-    { as: 'style', href: tailwindStyleSheetUrl, rel: 'preload' },
-    ...(cssBundleHref
-      ? [{ as: 'style', href: cssBundleHref, rel: 'preload' }]
-      : []),
+export const links: LinksFunction = () => [
+  { href: tailwindStyleSheetUrl, rel: 'stylesheet' },
+];
 
-    // Actually load CSS later to avoid render blocking.
-    { href: tailwindStyleSheetUrl, rel: 'stylesheet' },
-    ...(cssBundleHref ? [{ href: cssBundleHref, rel: 'stylesheet' }] : []),
-  ] satisfies LinkDescriptor[];
-};
-
-export default function App() {
+export function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -36,11 +25,14 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        {children}
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
   );
+}
+
+export default function App() {
+  return <Outlet />;
 }

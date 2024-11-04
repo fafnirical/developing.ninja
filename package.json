@@ -3,10 +3,14 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "imports": {
+    "#app/*": "./app/*",
+    "#tests/*": "./tests/*"
+  },
   "scripts": {
-    "build": "remix build",
+    "build": "remix vite:build",
     "commit": "git-cz",
-    "dev": "remix dev --manual",
+    "dev": "remix vite:dev",
     "format": "concurrently --names \"format:\" \"npm:format:*(!prettier)\" && npm run format:prettier",
     "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
     "format:package-json": "sort-package-json",
@@ -17,7 +21,7 @@
     "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --ignore-path .gitignore --check .",
     "lint:typescript": "tsc --noEmit",
     "prepare": "husky",
-    "start": "remix-serve ./build/index.js"
+    "start": "remix-serve ./build/server/index.js"
   },
   "dependencies": {
     "@remix-run/css-bundle": "^2.13.1",
@@ -43,6 +47,7 @@
     "@types/prettier": "^3.0.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
     "commitizen": "^4.3.1",
     "concurrently": "^9.0.1",
     "cz-conventional-changelog": "^3.3.0",
@@ -54,12 +59,15 @@
     "eslint-plugin-perfectionist": "^3.9.1",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
+    "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
     "sort-package-json": "^2.10.1",
     "tailwindcss": "^3.4.14",
     "typescript": "~5.6.3",
-    "typescript-eslint": "^8.12.2"
+    "typescript-eslint": "^8.12.2",
+    "vite": "^5.4.10",
+    "vite-tsconfig-paths": "^5.0.1"
   },
   "engines": {
     "node": "^20.9.0"
