@@ -9,7 +9,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
-import tailwindStyleSheetUrl from './tailwind.css?url';
+import tailwindStyleSheetUrl from './styles/tailwind.css?url';
 
 export const links: LinksFunction = () => [
   { href: tailwindStyleSheetUrl, rel: 'stylesheet' },
