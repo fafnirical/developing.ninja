@@ -32,7 +32,6 @@ const config = [
       },
     },
   },
-  perfectionist.configs['recommended-natural'],
   ...typescriptConfigs.strictTypeChecked,
   ...typescriptConfigs.stylisticTypeChecked,
   {
@@ -46,6 +45,31 @@ const config = [
   imports.flatConfigs.typescript,
   react.configs.recommended,
   react.configs['recommended-type-checked'],
+
+  perfectionist.configs['recommended-natural'],
+  {
+    rules: {
+      '@typescript-eslint/adjacent-overload-signatures': 'off',
+      '@typescript-eslint/sort-type-constituents': 'off',
+      'eslint-plugin-import/order': 'off',
+      'eslint-plugin-import-x/order': 'off',
+      'react/jsx-sort-props': 'off',
+      'sort-imports': 'off',
+      'sort-keys': 'off',
+    },
+  },
+  {
+    rules: {
+      'perfectionist/sort-imports': [
+        'error',
+        {
+          internalPattern: ['#*', '#*/**'],
+          order: 'asc',
+          type: 'natural',
+        },
+      ],
+    },
+  },
 
   prettier,
 ];
