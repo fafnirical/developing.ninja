@@ -12,7 +12,8 @@ import { configs as typescriptConfigs } from 'typescript-eslint';
  * @type {Array<
  *   | import('eslint').Linter.Config
  *   | import('@typescript-eslint/utils').TSESLint.FlatConfig.Config
- * >} */
+ * >}
+ */
 const config = [
   gitignore(),
   {
