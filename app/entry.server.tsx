@@ -20,7 +20,7 @@ export default function handleRequest(
   responseHeaders: Headers,
   remixContext: EntryContext,
 ) {
-  return isbot(request.headers.get('user-agent') || '')
+  return isbot(request.headers.get('user-agent') ?? '')
     ? handleBotRequest(
         request,
         responseStatusCode,
