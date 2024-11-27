@@ -24,7 +24,6 @@
     "start": "remix-serve ./build/server/index.js"
   },
   "dependencies": {
-    "@remix-run/css-bundle": "^2.15.3",
     "@remix-run/node": "^2.15.3",
     "@remix-run/react": "^2.15.3",
     "@remix-run/routes-option-adapter": "^2.15.3",
