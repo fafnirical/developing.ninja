@@ -1,6 +1,6 @@
-import js from '@eslint/js';
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import react from '@eslint-react/eslint-plugin';
+import js from '@eslint/js';
 import gitignore from 'eslint-config-flat-gitignore';
 import prettier from 'eslint-config-prettier';
 import * as oxcResolver from 'eslint-import-resolver-oxc';
@@ -51,8 +51,8 @@ const config = [
     rules: {
       '@typescript-eslint/adjacent-overload-signatures': 'off',
       '@typescript-eslint/sort-type-constituents': 'off',
-      'eslint-plugin-import/order': 'off',
       'eslint-plugin-import-x/order': 'off',
+      'eslint-plugin-import/order': 'off',
       'react/jsx-sort-props': 'off',
       'sort-imports': 'off',
       'sort-keys': 'off',
@@ -63,7 +63,7 @@ const config = [
       'perfectionist/sort-imports': [
         'error',
         {
-          internalPattern: ['#*', '#*/**'],
+          internalPattern: ['^#.+'],
           order: 'asc',
           type: 'natural',
         },

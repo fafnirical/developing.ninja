@@ -15,6 +15,10 @@ export const links: LinksFunction = () => [
   { href: tailwindStyleSheetUrl, rel: 'stylesheet' },
 ];
 
+export default function App() {
+  return <Outlet />;
+}
+
 export function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -31,8 +35,4 @@ export function Layout({ children }: { children: ReactNode }) {
       </body>
     </html>
   );
-}
-
-export default function App() {
-  return <Outlet />;
 }
