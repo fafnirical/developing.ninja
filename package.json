@@ -46,7 +46,7 @@
     "@tsconfig/remix": "^2.0.5",
     "@tsconfig/strictest": "^2.0.5",
     "@types/eslint-config-prettier": "^6.11.3",
-    "@types/node": "^22.10.0",
+    "@types/node": "^22.10.1",
     "@types/prettier": "^3.0.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
