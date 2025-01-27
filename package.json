@@ -30,7 +30,7 @@
     "@remix-run/routes-option-adapter": "^2.15.2",
     "@remix-run/serve": "^2.15.0",
     "isbot": "^5.1.21",
-    "react": "^18.3.1",
+    "react": "^19.0.0",
     "react-dom": "^18.3.1",
     "remix-flat-routes": "^0.6.5"
   },
@@ -48,7 +48,7 @@
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^22.10.10",
     "@types/prettier": "^3.0.0",
-    "@types/react": "^18.3.12",
+    "@types/react": "^19.0.8",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.20",
     "commitizen": "^4.3.1",
