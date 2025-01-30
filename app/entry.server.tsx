@@ -4,13 +4,13 @@
  * For more information, see https://remix.run/file-conventions/entry.server
  */
 
-import type { EntryContext } from '@remix-run/node';
+import type { EntryContext } from 'react-router';
 
-import { createReadableStreamFromReadable } from '@remix-run/node';
-import { RemixServer } from '@remix-run/react';
+import { createReadableStreamFromReadable } from '@react-router/node';
 import { isbot } from 'isbot';
 import { PassThrough } from 'node:stream';
 import { renderToPipeableStream } from 'react-dom/server';
+import { ServerRouter } from 'react-router';
 
 const ABORT_DELAY = 5_000;
 
@@ -18,20 +18,20 @@ export default function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext,
+  reactRouterContext: EntryContext,
 ) {
   return isbot(request.headers.get('user-agent') ?? '')
     ? handleBotRequest(
         request,
         responseStatusCode,
         responseHeaders,
-        remixContext,
+        reactRouterContext,
       )
     : handleBrowserRequest(
         request,
         responseStatusCode,
         responseHeaders,
-        remixContext,
+        reactRouterContext,
       );
 }
 
@@ -39,16 +39,12 @@ function handleBotRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext,
+  reactRouterContext: EntryContext,
 ) {
   return new Promise((resolve, reject) => {
     let shellRendered = false;
     const { abort, pipe } = renderToPipeableStream(
-      <RemixServer
-        abortDelay={ABORT_DELAY}
-        context={remixContext}
-        url={request.url}
-      />,
+      <ServerRouter context={reactRouterContext} url={request.url} />,
       {
         onAllReady() {
           shellRendered = true;
@@ -89,16 +85,12 @@ function handleBrowserRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext,
+  reactRouterContext: EntryContext,
 ) {
   return new Promise((resolve, reject) => {
     let shellRendered = false;
     const { abort, pipe } = renderToPipeableStream(
-      <RemixServer
-        abortDelay={ABORT_DELAY}
-        context={remixContext}
-        url={request.url}
-      />,
+      <ServerRouter context={reactRouterContext} url={request.url} />,
       {
         onError(error: unknown) {
           responseStatusCode = 500;
