@@ -1,16 +1,31 @@
 {
   "extends": [
     "@tsconfig/strictest/tsconfig.json",
-    "@tsconfig/node22/tsconfig.json",
-    "@tsconfig/remix/tsconfig.json"
+    "@tsconfig/node22/tsconfig.json"
   ],
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "baseUrl": ".",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "paths": {
+      "#app/*": ["./app/*"],
+      "#tests/*": ["./tests/*"]
+    },
+    "resolveJsonModule": true,
+    "rootDirs": [".", "./.react-router/types"],
+    "types": ["@react-router/node", "vite/client"],
+
     "noEmit": true,
 
-    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
 
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "target": "ES2022"
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ES2024"],
+    "target": "ES2023"
   },
   "include": [
     "**/.*.js",
