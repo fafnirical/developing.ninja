@@ -8,9 +8,9 @@
     "#tests/*": "./tests/*"
   },
   "scripts": {
-    "build": "remix vite:build",
+    "build": "react-router build",
     "commit": "git-cz",
-    "dev": "remix vite:dev",
+    "dev": "react-router dev",
     "format": "concurrently --names \"format:\" \"npm:format:*(!prettier)\" && npm run format:prettier",
     "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
     "format:package-json": "sort-package-json",
@@ -21,18 +21,17 @@
     "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --ignore-path .gitignore --check .",
     "lint:typescript": "tsc --noEmit",
     "prepare": "husky",
-    "start": "remix-serve ./build/server/index.js"
+    "start": "react-router-serve ./build/server/index.js"
   },
   "dependencies": {
-    "@remix-run/css-bundle": "^2.15.3",
-    "@remix-run/node": "^2.15.3",
-    "@remix-run/react": "^2.15.3",
-    "@remix-run/routes-option-adapter": "^2.15.3",
-    "@remix-run/serve": "^2.15.0",
+    "@react-router/node": "^7.1.5",
+    "@react-router/remix-routes-option-adapter": "^7.1.5",
+    "@react-router/serve": "^7.1.5",
     "isbot": "^5.1.22",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "remix-flat-routes": "^0.6.5"
+    "react-router": "^7.1.5",
+    "remix-flat-routes": "^0.8.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
@@ -40,10 +39,9 @@
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
     "@eslint-react/eslint-plugin": "^1.26.2",
     "@eslint/js": "^9.20.0",
-    "@remix-run/dev": "^2.15.0",
+    "@react-router/dev": "^7.1.5",
     "@total-typescript/ts-reset": "^0.6.1",
     "@tsconfig/node22": "^22.0.0",
-    "@tsconfig/remix": "^2.0.5",
     "@tsconfig/strictest": "^2.0.5",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^22.13.1",

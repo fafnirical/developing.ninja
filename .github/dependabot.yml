@@ -18,13 +18,17 @@ updates:
       commitlint:
         patterns:
           - '@commitlint/*'
+      react:
+        patterns:
+          - react
+          - '@types/react'
+          - react-dom
+          - '@types/react-dom'
+      react-router:
+        patterns:
+          - react-router
+          - '@react-router/*'
+          - 'remix-flat-routes'
       tsconfig:
         patterns:
           - '@tsconfig/*'
-      typescript-eslint:
-        patterns:
-          - '@typescript-eslint/*'
-      remix:
-        patterns:
-          - '@remix-run/*'
-          - '@tsconfig/remix'
