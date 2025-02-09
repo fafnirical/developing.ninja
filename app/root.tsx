@@ -1,13 +1,8 @@
 import type { ReactNode } from 'react';
-import type { LinksFunction } from 'react-router';
 
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
 
-import tailwindStyleSheetUrl from '#app/styles/tailwind.css?url';
-
-export const links: LinksFunction = () => [
-  { href: tailwindStyleSheetUrl, rel: 'stylesheet' },
-];
+import './styles/tailwind.css';
 
 export default function App() {
   return <Outlet />;
