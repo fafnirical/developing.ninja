@@ -18,6 +18,10 @@ updates:
       commitlint:
         patterns:
           - '@commitlint/*'
+      eslint:
+        patterns:
+          - eslint
+          - '@eslint/*'
       react:
         patterns:
           - react
