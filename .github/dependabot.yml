@@ -5,12 +5,7 @@ updates:
     schedule:
       interval: weekly
       day: friday
-      time: '16:00'
-      timezone: America/Los_Angeles
     open-pull-requests-limit: 100
-    target-branch: main
-    labels:
-      - dependencies
     commit-message:
       prefix: chore
       include: scope
