@@ -31,3 +31,12 @@ updates:
       tsconfig:
         patterns:
           - '@tsconfig/*'
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: weekly
+      day: friday
+    open-pull-requests-limit: 100
+    commit-message:
+      prefix: chore
+      include: scope
