@@ -1,39 +1,29 @@
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import react from '@eslint-react/eslint-plugin';
-import js from '@eslint/js';
+import eslint from '@eslint/js';
 import gitignore from 'eslint-config-flat-gitignore';
-import prettier from 'eslint-config-prettier';
-import * as oxcResolver from 'eslint-import-resolver-oxc';
-import imports from 'eslint-plugin-import-x';
+import prettier from 'eslint-config-prettier/flat';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
+import { createNodeResolver, importX } from 'eslint-plugin-import-x';
 import perfectionist from 'eslint-plugin-perfectionist';
-import { configs as typescriptConfigs } from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
+import { configs as typescript } from 'typescript-eslint';
 
-/**
- * @type {Array<
- *   | import('eslint').Linter.Config
- *   | import('@typescript-eslint/utils').TSESLint.FlatConfig.Config
- * >}
- */
-const config = [
+export default defineConfig(
   gitignore(),
+
   {
     linterOptions: {
       reportUnusedDisableDirectives: true,
     },
   },
-  js.configs.recommended,
+
   comments.recommended,
-  imports.flatConfigs.recommended,
-  {
-    settings: {
-      'import-x/resolver': {
-        name: 'oxc',
-        resolver: oxcResolver,
-      },
-    },
-  },
-  ...typescriptConfigs.strictTypeChecked,
-  ...typescriptConfigs.stylisticTypeChecked,
+
+  eslint.configs.recommended,
+
+  typescript.strictTypeChecked,
+  typescript.stylisticTypeChecked,
   {
     languageOptions: {
       parserOptions: {
@@ -42,8 +32,18 @@ const config = [
       },
     },
   },
-  imports.flatConfigs.typescript,
-  react.configs.recommended,
+
+  importX.flatConfigs.recommended,
+  importX.flatConfigs.typescript,
+  {
+    settings: {
+      'import-x/resolver-next': [
+        createTypeScriptImportResolver(),
+        createNodeResolver(),
+      ],
+    },
+  },
+
   react.configs['recommended-type-checked'],
 
   perfectionist.configs['recommended-natural'],
@@ -72,6 +72,4 @@ const config = [
   },
 
   prettier,
-];
-
-export default config;
+);
