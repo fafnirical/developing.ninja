@@ -1,12 +1,12 @@
 {
   "extends": [
     "@tsconfig/strictest/tsconfig.json",
-    "@tsconfig/node22/tsconfig.json"
+    "@tsconfig/node24/tsconfig.json"
   ],
   "compilerOptions": {
     "allowImportingTsExtensions": true,
     "baseUrl": ".",
-    "module": "ES2022",
+    "module": "esnext",
     "moduleResolution": "bundler",
     "paths": {
       "#app/*": ["./app/*"],
@@ -24,8 +24,8 @@
     "verbatimModuleSyntax": true,
 
     "jsx": "react-jsx",
-    "lib": ["DOM", "DOM.Iterable", "ES2024"],
-    "target": "ES2023"
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "target": "esnext"
   },
   "include": [
     "**/.*.js",
