@@ -24,8 +24,8 @@
     "start": "react-router-serve ./build/server/index.js"
   },
   "dependencies": {
-    "@react-router/node": "^7.9.5",
-    "@react-router/remix-routes-option-adapter": "^7.9.5",
+    "@react-router/node": "^7.9.6",
+    "@react-router/remix-routes-option-adapter": "^7.9.6",
     "@react-router/serve": "^7.9.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
