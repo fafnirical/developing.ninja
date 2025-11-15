@@ -28,9 +28,6 @@ updates:
           - react-router
           - '@react-router/*'
           - 'remix-flat-routes'
-      tsconfig:
-        patterns:
-          - '@tsconfig/*'
   - package-ecosystem: github-actions
     directory: '/'
     schedule:
