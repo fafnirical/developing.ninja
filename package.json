@@ -9,7 +9,6 @@
   },
   "scripts": {
     "build": "react-router build",
-    "commit": "git-cz",
     "dev": "react-router dev",
     "format": "concurrently --names \"format:\" \"npm:format:*(!prettier)\" && npm run format:prettier",
     "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
@@ -52,9 +51,7 @@
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.22",
-    "commitizen": "^4.3.1",
     "concurrently": "^9.2.1",
-    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.39.1",
     "eslint-config-flat-gitignore": "^2.1.0",
     "eslint-config-prettier": "^10.1.8",
