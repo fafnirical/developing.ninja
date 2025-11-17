@@ -27,7 +27,6 @@ updates:
         patterns:
           - react-router
           - '@react-router/*'
-          - 'remix-flat-routes'
   - package-ecosystem: github-actions
     directory: '/'
     schedule:
