@@ -36,5 +36,8 @@ jobs:
       - name: Install
         run: npm ci
 
+      - name: Run typegen
+        run: npm run typegen
+
       - name: Run linting task
         run: npm run lint:${{ matrix.lint-task }}
