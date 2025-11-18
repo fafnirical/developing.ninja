@@ -27,10 +27,10 @@ updates:
         patterns:
           - react-router
           - '@react-router/*'
-          - 'remix-flat-routes'
-      tsconfig:
+      tailwindcss:
         patterns:
-          - '@tsconfig/*'
+          - tailwindcss
+          - '@tailwindcss/*'
   - package-ecosystem: github-actions
     directory: '/'
     schedule:

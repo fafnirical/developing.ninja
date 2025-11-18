@@ -1,7 +1,6 @@
-/**
- * @type {import('prettier').Config}
- */
-const config = {
+import type { Config } from 'prettier';
+
+const config: Config = {
   arrowParens: 'always',
   bracketSameLine: false,
   bracketSpacing: true,

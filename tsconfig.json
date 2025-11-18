@@ -1,43 +1,57 @@
 {
-  "extends": [
-    "@tsconfig/strictest/tsconfig.json",
-    "@tsconfig/node24/tsconfig.json"
-  ],
   "compilerOptions": {
+    /* Type Checking */
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+
+    /* Modules */
     "allowImportingTsExtensions": true,
     "baseUrl": ".",
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "preserve",
+    "noUncheckedSideEffectImports": true,
     "paths": {
       "#app/*": ["./app/*"],
       "#tests/*": ["./tests/*"]
     },
-    "resolveJsonModule": true,
     "rootDirs": [".", "./.react-router/types"],
-    "types": ["@react-router/node", "vite/client"],
+    "types": ["node", "vite/client"],
 
+    /* Emit */
     "noEmit": true,
 
+    /* JavaScript Support */
     "allowJs": true,
+    "checkJs": true,
 
+    /* Interop Constraints */
+    "erasableSyntaxOnly": true,
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": true,
 
+    /* Language and Environment */
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "target": "esnext"
+    "target": "es2024",
+
+    /* Projects */
+    "incremental": true,
+
+    /* Completeness */
+    "skipLibCheck": true
   },
   "include": [
-    "**/.*.js",
-    "**/*.js",
-    "**/.*.cjs",
-    "**/*.cjs",
-    "**/*.jsx",
-    "**/.*.ts",
-    "**/*.ts",
-    "**/.*.cts",
-    "**/*.cts",
-    "**/*.tsx"
-  ],
-  "exclude": ["node_modules", "./.cache", "./build"]
+    "**/*",
+    "**/.server/**/*",
+    "**/.client/**/*",
+    ".react-router/types/**/*"
+  ]
 }

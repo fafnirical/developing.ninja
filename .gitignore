@@ -1,5 +1,8 @@
-node_modules
-
-/.react-router
-/build
 .env
+/node_modules/
+
+# React Router
+/.react-router/
+/build/
+
+*.tsbuildinfo

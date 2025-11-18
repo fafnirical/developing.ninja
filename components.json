@@ -5,11 +5,12 @@
   "tsx": true,
   "tailwind": {
     "config": "",
-    "css": "app/styles/tailwind.css",
+    "css": "app/app.css",
     "baseColor": "slate",
     "cssVariables": true,
     "prefix": ""
   },
+  "iconLibrary": "lucide",
   "aliases": {
     "components": "#app/components",
     "utils": "#app/lib/utils",
@@ -17,5 +18,5 @@
     "lib": "#app/lib",
     "hooks": "#app/hooks"
   },
-  "iconLibrary": "lucide"
+  "registries": {}
 }
