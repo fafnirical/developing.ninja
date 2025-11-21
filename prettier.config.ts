@@ -9,6 +9,14 @@ const config: Config = {
   htmlWhitespaceSensitivity: 'ignore',
   insertPragma: false,
   jsxSingleQuote: false,
+  overrides: [
+    {
+      files: ['.github/**/speckit.*.md', '.specify/**/*.md'],
+      options: {
+        proseWrap: 'preserve',
+      },
+    },
+  ],
   plugins: ['prettier-plugin-tailwindcss'],
   printWidth: 80,
   proseWrap: 'always',
