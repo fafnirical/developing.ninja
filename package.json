@@ -24,15 +24,15 @@
     "typegen": "react-router typegen"
   },
   "dependencies": {
-    "@react-router/node": "^7.9.6",
-    "@react-router/serve": "^7.9.6",
+    "@react-router/node": "^7.10.1",
+    "@react-router/serve": "^7.10.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "isbot": "^5.1.32",
     "lucide-react": "^0.555.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
-    "react-router": "^7.9.6",
+    "react-router": "^7.10.1",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint-react/eslint-plugin": "^2.3.9",
     "@eslint/js": "^9.39.1",
-    "@react-router/dev": "^7.9.6",
+    "@react-router/dev": "^7.10.1",
     "@tailwindcss/vite": "^4.1.17",
     "@total-typescript/ts-reset": "^0.6.1",
     "@types/eslint-config-prettier": "^6.11.3",
