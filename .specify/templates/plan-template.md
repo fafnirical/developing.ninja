@@ -31,7 +31,10 @@
 
 _GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 
-[Gates determined based on constitution file]
+- **Code Quality**: Identify impacted modules, planned refactors, and lint/format enforcement strategy (`npm run lint` scope, rule suppressions, reviewer sign-off).
+- **Testing Discipline**: Enumerate required automated tests (unit, component, integration) and how failing tests will be demonstrated before implementation.
+- **User Experience**: Reference the design tokens/components to be reused, accessibility checks to run, and UX risks needing validation.
+- **Performance Budgets**: State the target route transition times, acceptable bundle-size delta, and instrumentation plan for verifying performance.
 
 ## Project Structure
 

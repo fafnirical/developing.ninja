@@ -95,6 +95,13 @@ _Example of marking unclear requirements:_
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
+### Non-Functional Requirements _(mandatory)_
+
+- **NFR-QUALITY-001**: Code MUST remain lint-clean and follow module responsibility guidelines in the constitution. Note any necessary exceptions with justification.
+- **NFR-TEST-001**: Automated tests MUST cover each acceptance criterion (unit, component, integration). Specify expected suites and failure demonstrations.
+- **NFR-UX-001**: UX MUST reuse approved components/design tokens and document accessibility compliance checks (WCAG 2.1 AA outcomes).
+- **NFR-PERF-001**: Feature MUST meet defined performance budgets (e.g., route transition p95, bundle delta) and describe instrumentation for measurement.
+
 ### Key Entities _(include if feature involves data)_
 
 - **[Entity 1]**: [What it represents, key attributes without implementation]
@@ -109,7 +116,7 @@ _Example of marking unclear requirements:_
 
 ### Measurable Outcomes
 
-- **SC-001**: [Measurable metric, e.g., "Users can complete account creation in under 2 minutes"]
-- **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
-- **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
-- **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+- **SC-001**: [Measurable metric tied to user experience consistency, e.g., "Primary flow success rate ≥ 90% with no accessibility violations"]
+- **SC-002**: [Testing completion metric, e.g., "All planned automated suites pass in CI and cover acceptance criteria"]
+- **SC-003**: [Performance metric, e.g., "Route transition p95 ≤ 200 ms after deployment"]
+- **SC-004**: [Business or reliability metric, e.g., "No severity-1 regressions during post-release monitoring"]
