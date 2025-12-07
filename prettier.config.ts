@@ -11,7 +11,7 @@ const config: Config = {
   jsxSingleQuote: false,
   overrides: [
     {
-      files: ['.github/**/speckit.*.md', '.specify/**/*.md'],
+      files: ['.github/**/speckit.*.md', '.specify/**/*.md', 'specs/**/*.md'],
       options: {
         proseWrap: 'preserve',
       },
